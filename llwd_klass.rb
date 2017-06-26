@@ -24,7 +24,8 @@ module Baidu
 
 		def help
 			puts "Usage: lwd [TEXT]"
-			puts "	-h, --help			show help"
+			puts "	-h, --help         show help"
+			puts "	-                  STDIN"
 			exit 1
 		end
 			
@@ -59,8 +60,19 @@ module Baidu
 				help
 			elsif args[0] == '-h' or args[0] == '--help'
 				help
+			elsif args.size == 1 && args[0] == '-'
+				@q = $stdin.read
+			else
+			  @q = args.join(' ')
 			end
-			@q = args.join(' ')
+		end
+
+		def check_wudao
+			reg_on = /No such word: (.*) found online/
+			reg_off = /Error: no such word :(.*)\nYou can use -o to search online./
+			if @q =~ reg_on or @q =~ reg_off
+				@q = $1
+			end
 		end
 
 		def request_salt

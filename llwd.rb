@@ -16,6 +16,9 @@ tr.set_secret_key
 # read ARGV
 tr.request_str(ARGV)
 
+# check if use WUDAO
+tr.check_wudao 
+
 # set random salt
 tr.request_salt
 
