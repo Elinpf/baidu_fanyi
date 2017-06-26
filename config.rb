@@ -1,6 +1,7 @@
+# 到 http://api.fanyi.baidu.com/api/ 上注册一个用户，并填入 appid 和 secret_key
 module Baidu
 	module Config
-		Appid = ''
+		Appid = ''		
 		Secret_key = ''
 		From_lang	 = 'auto'
 		To_lang 	 = 'zh'
