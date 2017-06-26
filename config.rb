@@ -1,7 +1,7 @@
 module Baidu
 	module Config
-		Appid = '20161117000032016'
-		Secret_key = '2wsk5ZeESDgF6_3GoOIZ'
+		Appid = ''
+		Secret_key = ''
 		From_lang	 = 'auto'
 		To_lang 	 = 'zh'
 	end
