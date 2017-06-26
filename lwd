@@ -1,0 +1,5 @@
+#!/bin/bash
+save_path=$PWD
+cd /home/elin/lib/baidu_fanyi
+./llwd.rb $*
+cd $save_path
