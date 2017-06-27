@@ -25,6 +25,7 @@ module Baidu
 		def help
 			puts "Usage: lwd [TEXT]"
 			puts "	-h, --help         show help"
+			puts "	-e                 Transmite to English"
 			puts "	-                  STDIN"
 			exit 1
 		end
@@ -60,6 +61,10 @@ module Baidu
 				help
 			elsif args[0] == '-h' or args[0] == '--help'
 				help
+			elsif args[0] == '-e'
+				@to = 'en'
+				args.shift
+				@q = args.join(' ')
 			elsif args.size == 1 && args[0] == '-'
 				@q = $stdin.read
 			else
