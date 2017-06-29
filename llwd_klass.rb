@@ -23,9 +23,9 @@ module Baidu
 		end
 
 		def help
-			puts "Usage: lwd [TEXT]"
+			puts "Usage: lwd [-e] [TEXT]"
 			puts "	-h, --help         show help"
-			puts "	-e                 Transmite to English"
+			puts "	-e                 Translate to English"
 			puts "	-                  STDIN"
 			exit 1
 		end
